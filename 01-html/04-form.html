@@ -10,6 +10,42 @@
     <main>
       <form action="/submit">
         <!-- Add your code here -->
+          <form>
+            <h2>Form</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="name@pdx.edu"><br><br>
+            
+            <fieldset>
+              <p> Favorite Character: </p>
+              <input type="radio" id="spongebob" name="character" value="Spongebob">
+              <label for="spongebob">Spongebob</label><br>
+
+              <input type="radio" id="sandy" name="character" value="Sandy">
+              <label for="sandy">Sandy</label><br>
+
+              <input type="radio" id="patrick" name="character" value="Patrick">
+              <label for="patrick">Patrick</label><br><br>
+            </fieldset>
+            
+            <fieldset>
+
+            <p>Are you a fan of the show?</p>
+            <input type="checkbox" id="watchedAll" name="fan[]" value="AllEpisodes">
+            <label for="watchedAll">Yes, I have watched all episodes!</label><br>
+
+            <input type="checkbox" id="memes" name="fan[]" value="Memes">
+            <label for="memes">Yes, it's got the best memes.</label><br><br>
+            </fieldset>
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+          </form>
+
       </form>
     </main>
   </body>
