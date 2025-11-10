@@ -4,14 +4,27 @@
 
 /* Grid Container 1 */
 
+.grid-container-1 {
+  background-color: rgb(190, 190, 231);
+}
+
 /* Grid Container 2 */
+.grid-container-2 {
+  background-color: rgb(10, 190, 0);
+}
 
 /* use height: 400px; on the container */
 
 /* Grid Container 3 */
+.grid-container-3 {
+  background-color: rgb(190, 190, 231);
+}
 
 /* use height: 400px; on the container */
 
 /* Grid Container 4 */
+.grid-container-4 {
+  background-color: rgb(190, 190, 231);
+}
 
 /* use height: 600px; on the container */

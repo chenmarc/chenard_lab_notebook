@@ -11,19 +11,63 @@
   justify-content: center;
 }
 
+
 /* Flex Container 2 */
+.flex-container-2 {
+  display: flex; /* added */
+  flex-wrap: wrap; /* ensures second row */
+  justify-content: flex-start; /* aligns items to the right */
+  flex-direction: row-reverse; /* reverses order of boxes */
+}
 
 /* Flex Container 3 */
 /* use height: 400px; on the container */
-
-/* Flex Container 4 */
-
-/* Flex Container 5 */
-
-/* Flex Container 6 */
-
-.flex-container-6 .flex-item {
-  width: 400px;
+.flex-container-3 {
+  display: flex; /* added */
+  height: 400px; /* per instruction */
+  flex-direction: column-reverse; /* stacks vertically bottom-up */
+  justify-content: space-between; /* space between the two columns */
+  align-items: flex-end; 
+  flex-wrap: wrap; /* allows two columns */
 }
 
-/* use height: 300px; on the container */
+/* 4 */
+.flex-container-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-content:first baseline; 
+  flex-direction: row;
+}
+.flex-container-4 > :nth-child(n +6) {
+  order: -1; 
+}
+
+/* 5 */
+.flex-container-5 {
+  display: flex;
+  justify-content: center;
+  align-items:center; 
+}
+.flex-container-5 > *:nth-child(4),
+.flex-container-5 > *:nth-child(5),
+.flex-container-5 > *:nth-child(7) { height: 120px; } /* smallest */
+.flex-container-5 > *:nth-child(1),
+.flex-container-5 > *:nth-child(3),
+.flex-container-5 > *:nth-child(6) { height: 160px; } /* medium */
+.flex-container-5 > *:nth-child(2),
+.flex-container-5 > *:nth-child(8) { height: 240px; } /* tallest */
+
+/* 6 */
+.flex-container-6 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  height: 300px;
+}
+.flex-container-6 > * {
+  width: 30%; /* three uniform columns */
+  box-sizing: border-box;
+}
