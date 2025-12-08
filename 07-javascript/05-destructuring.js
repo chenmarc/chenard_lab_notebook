@@ -1,8 +1,21 @@
-const destructureItems = (input) => {
+/*const destructureItems = (input) => {
   // destructure the name and parents of the character and format the output as shown
 
   return input;
-};
+};*/
+function destructureItems({
+  first,
+  last,
+  allegiance: {
+    parents: { mother, father }
+  }
+}) {
+  const name = `${first} ${last}`;
+
+  console.log(name);
+  console.log('daughter of');
+  console.log(`${mother} and ${father}`);
+}
 
 const sansa = {
   first: 'Sansa',

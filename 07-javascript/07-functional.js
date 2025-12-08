@@ -19,24 +19,19 @@ const characters = [
   { id: 88, name: 'Brienne', house: 'Tarth' },
 ];
 
-const mapNameFamily = (characters) => {
-  // Return an array with the name and house of each character
-  // Format: "Arya, of House Stark"
 
-  return characters;
-};
+const mapNameFamily = (characters) => 
+  characters.map(({ name, house }) => `${name}, of House ${house}`);
 
-const filterFamily = (characters, house) => {
-  // Return an array with only the characters from a given house
+const filterFamily = (characters, house) => 
+  characters.filter(char => char.house === house);
 
-  return characters;
-};
 
-const reduceHouses = (characters) => {
-  // Return an object with the number of characters from each house
-
-  return characters;
-};
+const reduceHouses = (characters) => 
+  characters.reduce((counts, { house }) => {
+    counts[house] = (counts[house] || 0) + 1;
+    return counts;
+  }, {});
 
 console.log(mapNameFamily(characters));
 // [
