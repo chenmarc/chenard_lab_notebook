@@ -1,4 +1,60 @@
-@media (min-width: 1024px) {
+/* Fixes the nav to the top of the viewport so it stays visible during scroll */
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: var(--black);
+}
+
+/* Removes default browser indentation and spacing from the list */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Makes list items sit side-by-side (horizontally) instead of stacking */
+/* Also removes the bullet points */
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* Styles the clickable links */
+nav ul li a {
+  display: block;
+  margin: 10px 10px;
+  padding: 10px;
+  color: var(--white);
+  text-decoration: none;
+}
+/* Adds top margin to push content down so it is not hidden behind the fixed nav */
+.main {
+  margin-top: 100px;
+  padding: 0 12px;
+}
+
+/* MEDIA QUERY: MOBILE DEVICES (Screens 414px wide or smaller) */
+@media (max-width: 414px) {
+  body {
+    background: var(--purple);
+    color: var(--white);
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 260px;
+  }
+}
+/* MEDIA QUERY: TABLETS (Screens between 415px and 1024px) */
+@media (min-width: 415px) and (max-width: 1024px) {
+  body {
+    background: var(--orange);
+  }
+}
+@media (min-width: 1025px) {
   body {
     background: var(--green);
     color: var(--white);
